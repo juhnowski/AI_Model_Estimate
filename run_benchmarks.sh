@@ -6,17 +6,19 @@ set -euo pipefail
 # Список моделей для последовательного тестирования из проекта AI_Model_Estimate
 MODELS=(
     "qwen3:235b"
-    "nemotron-3.5-super-vl-120b"
-    "qwen3.5-122b-a10b"
-    "qwen3.8-flash-next"
-    "gpt-oss-120b"
+    "nemotron-3.5-super"
+    "qwen3.5:122b"
+    "qwen3.8:27b"
+    "gpt-oss:120b"
 )
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE}")" && pwd)"
 BENCHMARK_SCRIPT="$SCRIPT_DIR/benchmark.py"
 LOG_DIR="$SCRIPT_DIR/logs"
-TIMEOUT_LIMIT=900 # 15 минут таймаут на тест одной модели до фиксации зависания (deadlock)
 
+# Увеличиваем таймаут до 45 минут (2700 сек) 
+# Тяжелый Qwen3:235b на PCIe-интерконнекте без NVLink обрабатывает очередь медленнее
+TIMEOUT_LIMIT=2700 
 mkdir -p "$LOG_DIR"
 
 echo "========================================================"
