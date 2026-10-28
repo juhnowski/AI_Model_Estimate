@@ -1,0 +1,32 @@
+=== АППАРАТНЫЙ АУДИТ СЕРВЕРА ДЛЯ ЗАКУПКИ ===
+
+1. ПРОЦЕССОРЫ (CPU):
+Thread(s) per core:                      2
+
+2. МАТЕРИНСКАЯ ПЛАТА И ЧИПСЕТ:
+	Manufacturer: NULL
+	Product Name: NULL
+	Version: 0
+00:00.4 Host bridge: Intel Corporation Ice Lake IEH
+00:1f.0 ISA bridge: Intel Corporation Device a1cb (rev 0a)
+16:00.4 Host bridge: Intel Corporation Ice Lake IEH
+
+3. ОПЕРАТИВНАЯ ПАМЯТЬ (RAM):
+Общий объем в системе: 503Gi
+	Configured Memory Speed: 3200 MT/s
+	Error Correction Type: Single-bit ECC
+	Size: 32 GiB
+	Speed: 3200 MT/s
+	Type: DDR4
+	Type: Unknown
+	Volatile Size: 32 GiB
+
+4. СИСТЕМНЫЕ ШИНЫ И ЛИНИИ PCIE:
+		LnkCap:	Port #0, Speed 16GT/s, Width x16, ASPM L1, Exit Latency L1 <64us
+		LnkCap:	Port #0, Speed 16GT/s, Width x16, ASPM not supported
+		LnkCap:	Port #0, Speed 5GT/s, Width x1, ASPM L0s L1, Exit Latency L0s <2us, L1 <2us
+		LnkCap:	Port #0, Speed 5GT/s, Width x8, ASPM L0s, Exit Latency L0s <1us
+
+5. ДИСКОВАЯ ПОДСИСТЕМА (ХРАНИЛИЩЕ):
+sda     2,6T disk MR9361-16i
+sdb    15,3T disk MR9361-16i
